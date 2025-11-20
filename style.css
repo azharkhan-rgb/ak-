@@ -1,0 +1,35 @@
+/* AK STUDIO - simple multi-page style */
+:root{
+  --bg:#071124; --card:#0f1a2b; --accent:#705DF2; --accent2:#B48CFF;
+  --muted:#9CA3AF; --white:#E6EEFF; --btn-gradient: linear-gradient(135deg,var(--accent),var(--accent2));
+  --radius:12px; --maxw:1100px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial;background:var(--bg);color:var(--white);min-height:100vh;overflow-x:hidden}
+.container{max-width:var(--maxw);margin:0 auto;padding:28px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0;position:relative;z-index:5}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:44px;border-radius:8px}
+.site-name{font-weight:700;font-size:18px}
+nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600}
+nav a.active{color:var(--accent2)}
+.hero{display:flex;gap:32px;align-items:center;padding:48px 0;position:relative;z-index:2}
+.h-title{font-size:34px;margin:0 0 12px;font-weight:800;line-height:1.05}
+.h-title .accent{background:-webkit-linear-gradient(45deg,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.h-sub{color:var(--muted);margin-bottom:18px}
+.btn{background:var(--btn-gradient);color:#071124;padding:12px 18px;border-radius:10px;border:none;font-weight:700;text-decoration:none;display:inline-block}
+.section{padding:40px 0;position:relative;z-index:2}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 20px rgba(0,0,0,0.35)}
+.card h3{margin:0 0 6px;font-size:18px}
+.price{margin-top:10px;font-weight:700;color:var(--accent2)}
+.book{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;background:var(--btn-gradient);color:#071124;text-decoration:none;font-weight:700}
+.about{display:flex;gap:20px;align-items:center}
+.about img{width:220px;border-radius:10px}
+footer{padding:30px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:30px;position:relative;z-index:2}
+#particles-canvas{position:fixed;inset:0;z-index:0;display:block}
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .about{flex-direction:column}
+}
